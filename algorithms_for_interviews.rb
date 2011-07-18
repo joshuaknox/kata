@@ -17,3 +17,20 @@ def mindex(array, k, i=0)
     search_sorted_for_k(left, k, i)
   end
 end
+
+
+class Array
+
+  def my_uniq
+    uniqd = []
+    self.sort.each {|x| x == uniqd.last ? nil : uniqd << x }
+    uniqd
+  end
+
+  def my_uniq2
+    elements = {}
+    self.each {|x| elements[x] = nil }
+    elements.keys
+  end
+
+end
